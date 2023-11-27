@@ -27,14 +27,18 @@ How to censor gracefully? First, don’t do it; unless it is completely necessar
 In some cases, it is not a question of censorship, but of creating specific rules of interaction (e.g. character limit on Twitter) or rules that incentivise giving more space to the _Signal_ and less to the _Noise_.
 
 Again, who decides what is Signal and what is Noise? Well, you know who, the receiver!
+
+
 ![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/30a21cb3-e083-4146-8841-4fd6e43ba97c)
 
+
 In a Social Network, the receiver is any user really.
+
 Ideally, the Developer or the Client **should have no power to discard or hide messages**. The Client, however, should be able to _curate_ the experience it offers by applying rules of interactions and filters to all messages, in an _equal manner_. These filters can change the nature of the messages (e.g. length) but cannot choose specifically which one are allowed or not allowed.
 
 **Rule 2:** _Client can only apply filters that are equal for all, otherwise he can choose what messages or opinions are allowed or not allowed._
 
-One of such filters, a tool that was not, but is now present in the toolbox of developers, is money. That is really an equal filter, as the value of money is the intersection of each person’s subjective values, coordinated by the market.
+One of such filters, a tool that was not, but is now present in the toolbox of developers, is money. That is really an equal filter, as the value of money lies in the intersection of each person’s subjective values, coordinated by the market.
 
 Given a message $m$ and a threshold $t$, the Client filters all messages such that 
 $$donation(m) < t $$
@@ -71,7 +75,7 @@ This is the condition I propose for making a message $m$ from a $usr$ _viewable_
 
 The Clients sets the threshold $t$
 
-1. If $G(usr) = 0$ AND $donation(m) < t$, sets $m$ to non-viewable
+1. If $G(usr) \approx 0$ AND $donation(m) < t$, sets $m$ to non-viewable
 2. Else, $m$ is viewable
 
 
@@ -89,7 +93,10 @@ Only the receiver/user can judge spam. Furthermore, only him can judge what
 is of value to him and what is not. Each user of a social network expresses this
 judgement by choosing _to follow_ some people and _not follow_ others. Let us take
 this small network as an example.
+
+
 ![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/9135f71b-b64a-4fe9-a52b-20fc89343e06)
+
 
 We imagine a network as a graph in which the nodes are the people and the
 oriented arcs (or arrows) represent that one (the tail) follows another (the tip).
@@ -137,7 +144,10 @@ $$ B \cdot B = \begin{pmatrix}
     \end{pmatrix}$$
 
 This is the result after one round.
+
+
 ![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/2f5e29b6-5a63-435f-8728-3c9c6253d67d)
+
 
 If we apply two other rounds of the algorithm, we obtain:
 
@@ -199,7 +209,9 @@ The user $n_i$ sets a trust threshold $t_i$
 
 The Content Showing Algorithm (horrible name I know) along with the Content Visibility Condition is represented in the following scheme.
 
+
 ![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/e5e7885c-d98d-46e5-a98a-0ae131e799c2)
+
 
 A great property of this system is that it \textbf{filters out self-donations} that a user might make to make his own profile/post stand out.\\\\
 In fact, such a usr would not use his own profile/npub, otherwise he would be immediately caught. He would go on to create secondary identities or make donations anonymously bigger than the threshold $t_{clients}$ with negligible cost.\\\\
