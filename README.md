@@ -1,4 +1,4 @@
-# How to Deal With Spam in a Decentralized Way
+# How to Deal With Spam in a Decentralized Way v0.1
 Decentralised systems, if successful, suffer from spam problems. But what is spam, and more importantly, how to solve it?
 
 ## What is Spam?
@@ -36,7 +36,7 @@ In a Social Network, the receiver is any user really.
 
 Ideally, the Developer or the Client **should have no power to discard or hide messages**. The Client, however, should be able to _curate_ the experience it offers by applying rules of interactions and filters to all messages, in an _equal manner_. These filters can change the nature of the messages (e.g. length) but cannot choose specifically which one are allowed or not allowed.
 
-**Rule 2:** _Client can only apply filters that are equal for all, otherwise he can choose what messages or opinions are allowed or not allowed._
+**Rule 2:** _Client can only apply filters that are equal for all, otherwise they can choose what messages or opinions are allowed or not allowed._
 
 One of such filters, a tool that was not, but is now present in the toolbox of developers, is money. That is really an equal filter, as the value of money lies in the intersection of each person’s subjective values, coordinated by the market.
 
@@ -165,7 +165,7 @@ $$ B^3  = \begin{pmatrix}
     0 & 1 & 0  & 0 \\
     \end{pmatrix} = B $$
 
-$B^4$ is the starting matrix $B$, this tells us that trust has gone round and round again. So we stop at $B^3$, which has elements on the diagonal, which means that a node gives itself trust. This is reasonable, but we do not want to count it in our analysis, therefore we set $B^3_*$ to have the same entries like $B^3$ but without the diagonal ones. We define the \textbf{Local Trust Matrix} $T_{\gamma}$ as follows:
+$B^4$ is the starting matrix $B$, this tells us that trust has gone round and round again. So we stop at $B^3$, which has elements on the diagonal, which means that a node gives itself trust. This is reasonable, but we do not want to count it in our analysis, therefore we set $B^3_*$ to have the same entries like $B^3$ but without the diagonal ones. We define the **Local Trust Matrix** $T_{\gamma}$ as follows:
 
 $$T_{\gamma}  \doteq  \ \mathbb{I} + B + \gamma B^2 + \gamma^2 B^3_*$$
 
@@ -212,7 +212,7 @@ The Content Showing Algorithm (horrible name I know) along with the Content Visi
 ![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/31ee56cf-6b5d-4331-b76e-3b03fe6b8b1e)
 
 
-A great property of this system is that it \textbf{filters out self-donations} that a _usr_ might make to make his own profile/post stand out.
+A great property of this system is that it **filters out self-donations** that a _usr_ might make to make his own profile/post stand out.
 In fact, such a usr would not use his own profile/npub, otherwise he would be immediately caught. He would go on to create secondary identities or make donations anonymously bigger than the threshold $t_{clients}$ with negligible cost.\\\\
 
 In any case, the Local Trust Score would be 0 for every user $n_i$, \textbf{therefore no one will see the fake donations.}
