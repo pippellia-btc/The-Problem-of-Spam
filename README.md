@@ -82,7 +82,7 @@ The Clients sets the threshold $t$
 In other words, if you are an anonymous person whom nobody knows, then the
 burden of proof is on you. Pay some sats and you can get people’s attention.
 Also, those who wish to criticise do not run into the problem of having to donate
-in the first place. Adam Back could share his criticism on something without having to donate to it in the first place, and you would probably like to not having that being filtered out.
+in the first place. Adam Back could share his criticism of something without having to make a donation, and you would probably want to avoid it being filtered.
 
 However, the fact that a message $m$ is _viewable_ does not mean that it will actually
 be seen. Such is only one part of the algorithm I propose.
@@ -170,19 +170,19 @@ $B^4$ is the starting matrix $B$, this tells us that trust has gone round and ro
 $$T_{\gamma}  \doteq  \ \mathbb{I} + B + \gamma B^2 + \gamma^2 B^3_*$$
 
 $$T = \begin{pmatrix} 
-    0 & 1 & \gamma  & \gamma^2 \\
-    0 & 0 & 1  & \gamma \\
-    0 & \gamma& 0  & 1 \\
-    0 & 1 & \gamma  & 0 \\
+    1 & 1 & \gamma  & \gamma^2 \\
+    0 & 1 & 1  & \gamma \\
+    0 & \gamma& 1  & 1 \\
+    0 & 1 & \gamma  & 1 \\
     \end{pmatrix}$$
 
 Choosing $\gamma = \frac{1}{2}$ for example, would result in a matrix $T_{\frac{1}{2}}$
 
 $$ T_{\frac{1}{2}} = \begin{pmatrix} 
-    0 & 1 & 0.5  & 0.25 \\
-    0 & 0 & 1  & 0.5 \\
-    0 & 0.5 & 0  & 1 \\
-    0 & 1 & 0.5  & 0 \\
+    1 & 1 & 0.5  & 0.25 \\
+    0 & 1 & 1  & 0.5 \\
+    0 & 0.5 & 1  & 1 \\
+    0 & 1 & 0.5  & 1 \\
     \end{pmatrix} $$
 
 In all generality, the algorithm for creating the Local Trust Matrix $T_{\gamma}$ is:
