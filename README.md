@@ -209,11 +209,10 @@ The user $n_i$ sets a trust threshold $t_i$
 
 The Content Showing Algorithm (horrible name I know) along with the Content Visibility Condition is represented in the following scheme.
 
+![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/31ee56cf-6b5d-4331-b76e-3b03fe6b8b1e)
 
-![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/e5e7885c-d98d-46e5-a98a-0ae131e799c2)
 
-
-A great property of this system is that it \textbf{filters out self-donations} that a user might make to make his own profile/post stand out.\\\\
+A great property of this system is that it \textbf{filters out self-donations} that a _usr_ might make to make his own profile/post stand out.
 In fact, such a usr would not use his own profile/npub, otherwise he would be immediately caught. He would go on to create secondary identities or make donations anonymously bigger than the threshold $t_{clients}$ with negligible cost.\\\\
 
 In any case, the Local Trust Score would be 0 for every user $n_i$, \textbf{therefore no one will see the fake donations.}
@@ -233,7 +232,8 @@ $$\left(\begin{array}{@{}ccccc@{}}
   \end{array}\right) \sim 
   \left(\begin{array}{@{}cc|ccc@{}}
     1 & 1  & 0 & 0 & 0 \\
-    1 & 1  & 0 & 0 & 0 \\\hline
+    1 & 1  & 0 & 0 & 0 \\
+    --& --& --& --&--& \\
     0 & 0  & 1 & 1 & 1 \\
     0 & 0  & 1 & 1 & 1 \\
     0 & 0  & 1 & 1 & 1 \\
@@ -247,7 +247,7 @@ $$ B \sim \begin{pmatrix}
     0 & \dots  & B_K 
     \end{pmatrix} $$
 
-and the dimensions of the blocks $B_i$ are respectively $N_i \times N_i$, then computing $B^2$ doesn't cost $O(N^3) $ anymore, but $O(N_1^3 + N_2^3 + \dots + N_K^3)$. This can be a great improvement!
+and the dimensions of the blocks $B_i$ are respectively $N_i \times N_i$, then computing $B^2$ doesn't cost $O(N^3)$ anymore, but $O(N_1^3 + N_2^3 + \dots + N_K^3)$. This can be a great improvement!
 
 Consider for instance $N = 10^6$ ,  $N_i = 1000 \ \forall i \leq 1000$.
 
