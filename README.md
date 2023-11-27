@@ -192,7 +192,7 @@ In all generality, the algorithm for creating the Local Trust Matrix $T_{\gamma}
 2. for $j = 1, \dots k$
     1. compute $B^j = B^{j-1} \cdot B$
     2. compute $B^j_*$, which is $B^j$ without all the entries already 'counted' by $\mathbb{I}, B, \dots B^{j-1}$
-3. return $T_{\gamma} = \mathbb{I} + \sum_{j=1}^k \gamma^{j-1} B^j_*$
+3. return $T_{\gamma} = \mathbb{I} + \sum_{j} \gamma^{j-1} B^j_*$
 
 This algorithm is to be considered an initial approach to the problem, since it is still very rudimentary. Moreover, the cost of such an algorithm increases not particularly well, but this I am sure can be improved. The product of two $N \times N$ matrices done naively costs $O(N^3)$. Having to do $k-1$ of such products and then adding everything together, the cost of the algorithm is at least $O(k N^3)$.
 
