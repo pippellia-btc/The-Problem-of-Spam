@@ -36,7 +36,7 @@ In a Social Network, the receiver is any user really.
 
 Ideally, the Developer or the Client **should have no power to discard or hide messages**. The Client, however, should be able to _curate_ the experience it offers by applying rules of interactions and filters to all messages, in an _equal manner_. These filters can change the nature of the messages (e.g. length) but cannot choose specifically which one are allowed or not allowed.
 
-**Rule 2:** _Client can only apply filters that are equal for all, otherwise they can choose what messages or opinions are allowed or not allowed._
+**Rule 2:** _Clients can only apply filters that are equal for all, otherwise they can choose what messages or opinions are allowed or not allowed._
 
 One of such filters, a tool that was not, but is now present in the toolbox of developers, is money. That is really an equal filter, as the value of money lies in the intersection of each person’s subjective values.
 
@@ -105,7 +105,7 @@ to trusts Pip a little. There can be other ways in which trust flows within a
 network, but let us focus on this one for now.
 
 A simple algorithm to calculate the ’flow of trust’ is the following:
-Let us consider the set of nodes {$n_1, n_2, n_3, n_4$} = {Satoshi, Gigi, Pip, Adam}.
+Let us consider the set of nodes { $n_{1}$, $n_{2}$, $n_{3}$, $n_{4}$ } = {Satoshi, Gigi, Pip, Adam}.
 
 We construct the matrix $B$, in which the element $b_{i,j}$ is 1 if $n_i$ follows $n_j$ , 0
 otherwise.
@@ -212,14 +212,14 @@ The Content Showing Algorithm (horrible name I know) along with the Content Visi
 ![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/31ee56cf-6b5d-4331-b76e-3b03fe6b8b1e)
 
 
-A great property of this system is that it **filters out self-donations** that a _usr_ might make to make his own profile/post stand out.
-In fact, such a usr would not use his own profile/npub, otherwise he would be immediately caught. He would go on to create secondary identities or make donations anonymously bigger than the threshold $t_{clients}$ with negligible cost.\\\\
+A great property of this system is that it **filters out self-donations** that a _usr_ might make to his own profile/post in order to "game tha algorithm" and stand out.
+In fact, such a _usr_ would not use his own profile/npub, otherwise he would be immediately caught. He would go on to create secondary identities or make anonymous donations bigger than the threshold $t_{clients}$ with negligible cost.
 
-In any case, the Local Trust Score would be 0 for every user $n_i$, \textbf{therefore no one will see the fake donations.}
+In any case, the Local Trust Score would be 0 for every user $n_i$, **therefore no one will see the fake donations.**
 
 # Conclusions
 
-This paper is to be understood as a first step in the realisation of such a filtering system; the algorithm described suffers from a scalability problem, since each logged-in user of a Client affects the matrix $T_{\gamma}$, which will then have tens of thousands of entries. To avoid a DoS attack against the Client, measures can be implemented that avoid recalculation of $T_{\gamma}$ unless the new user $n_{new}$ has a $G(n_{new})>0$, or by introducing a minimum delay between recalculations (or both).
+This paper is to be understood as a first step in the realisation of such a filtering system; the algorithm described it's very rudimentary and suffers from a scalability problem, since each logged-in user of a Client affects the matrix $T_{\gamma}$, which will then have tens of thousands of entries. To avoid a DoS attack against the Client, measures can be implemented that avoid recalculation of $T_{\gamma}$ unless the new user $n_{new}$ has a $G(n_{new})>0$, or by introducing a minimum delay between recalculations (or both).
 
 Furthermore, an interesting direction to explore is to block-decompose the matrix $B$, by doing index rearrangements. An example follows:
 
