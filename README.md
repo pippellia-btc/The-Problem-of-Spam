@@ -38,7 +38,7 @@ Ideally, the Developer or the Client **should have no power to discard or hide m
 
 **Rule 2:** _Client can only apply filters that are equal for all, otherwise they can choose what messages or opinions are allowed or not allowed._
 
-One of such filters, a tool that was not, but is now present in the toolbox of developers, is money. That is really an equal filter, as the value of money lies in the intersection of each person’s subjective values, coordinated by the market.
+One of such filters, a tool that was not, but is now present in the toolbox of developers, is money. That is really an equal filter, as the value of money lies in the intersection of each person’s subjective values.
 
 Given a message $m$ and a threshold $t$, the Client filters all messages such that 
 $$donation(m) < t $$
