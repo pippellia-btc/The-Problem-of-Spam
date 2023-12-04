@@ -3,9 +3,9 @@ import scipy as sp
 from matplotlib import pyplot as plt
 import time
 
-# B is the belief matrix (bij = 1 if ni follows nj)
+# B is the belief matrix (bij = 1 if ni follows nj, 0 otherwise)
 # n is the number of iterations
-# gamma is how fast the trust decay factor
+# gamma is the trust decay factor
 
 def trust_matrix(B, n = 5, gamma = 0.5):
 
