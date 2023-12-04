@@ -7,9 +7,9 @@ If you look up the word Spam in a dictionary, what you find is more or less the 
 2. Any _undesired_ electronic content automatically generated.
 
 '_Unsolicited_’, ’_undesired_’, but who judges? Well, obviously the receiver judges it, but he is also the only one who can. What is trash (or spam!) to one is treasure to another.
+This point is really important to get. In a decentralized system, there are no masters that decide what is spam and what isn't. You have to decide for yourself.
 
-**Rule 1**. _You cannot judge what spam is for someone else. Not even close
-in some cases._
+**Rule 1**. _You cannot judge what spam is for someone else. Not even close in some cases._
 
 There are online communities that you can consider weird, or excessive, or
 transgressive, many would say the same thing about us bitcoiners. In any case,
@@ -78,7 +78,6 @@ The Clients sets the threshold $t$
 1. If $G(usr) \approx 0$ AND $donation(m) < t$, sets $m$ to non-viewable
 2. Else, $m$ is viewable
 
-
 In other words, if you are an anonymous person whom nobody knows, then the
 burden of proof is on you. Pay some sats and you can get people’s attention.
 Also, those who wish to criticise do not run into the problem of having to donate
@@ -91,8 +90,9 @@ be seen. Such is only one part of the algorithm I propose.
 
 Only the receiver/user can judge spam. Furthermore, only him can judge what
 is of value to him and what is not. Each user of a social network expresses this
-judgement by choosing _to follow_ some people and _not follow_ others. Let us take
-this small network as an example.
+judgement by choosing _to follow_ some people and _not follow_ others.
+
+Let us take this small network as an example.
 
 
 ![image](https://github.com/pippellia-btc/The-Problem-of-Spam/assets/108896743/9135f71b-b64a-4fe9-a52b-20fc89343e06)
@@ -213,7 +213,7 @@ The Content Showing Algorithm (horrible name I know) along with the Content Visi
 
 
 A great property of this system is that it **filters out self-donations** that a _usr_ might make to his own profile/post in order to "game tha algorithm" and stand out.
-In fact, such a _usr_ would not use his own profile/npub, otherwise he would be immediately caught. He would go on to create secondary identities or make anonymous donations bigger than the threshold $t_{clients}$ with negligible cost.
+In fact, such a _usr_ would not use his own profile/npub, otherwise he would be immediately caught. He would go on to create secondary identities or make anonymous donations bigger than the threshold $t_{clients}$ with negligible cost (the fees).
 
 In any case, the Local Trust Score would be 0 for every user $n_i$, **therefore no one will see the fake donations.**
 
