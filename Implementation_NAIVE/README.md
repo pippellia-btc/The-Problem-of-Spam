@@ -17,4 +17,4 @@ And here is the asymptotic analysis
 The ODR polynomial is 
 $$\approx 10^{-11} N^3 + 10^{-7} N^2 - 10^{-4} N + 10^{-1}$$
 
-Which means that the cubit term will outweight the quadratic term when $N \geq 10^4$
+Which implies that the cubit term will outweight the quadratic term when $N \geq 10^4$
