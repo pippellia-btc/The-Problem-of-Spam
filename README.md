@@ -101,8 +101,8 @@ Let us take this small network as an example.
 We imagine a network as a graph in which the nodes are the people and the
 oriented arcs (or arrows) represent that one (the tail) follows another (the tip).
 In meatspace, if Satoshi trusts Gigi, and Gigi trusts Pip, Satoshi will also start
-to trusts Pip a little. There can be other ways in which trust flows within a
-network, but let us focus on this one for now.
+to trusts Pip a little. There can be other ways in which trust and or distrust flows within a
+network, but let us focus on this one for now. (learn more: https://snap.stanford.edu/class/cs224w-readings/guha04trust.pdf)
 
 A simple algorithm to calculate the ’flow of trust’ is the following:
 Let us consider the set of nodes { $n_{1}$, $n_{2}$, $n_{3}$, $n_{4}$ } = {Satoshi, Gigi, Pip, Adam}.
