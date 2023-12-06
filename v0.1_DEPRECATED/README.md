@@ -1,6 +1,8 @@
-# NAIVE ALgorithm
+# Trust Matrix Algorithm v0.1
 
-This is a simple implementation of the algorithm.
+_This should be considered deprecated_
+
+This is a simple implementation of the algorithm, in which the entries of B are float.
 It computes the powers of the _Belief matrix_ $B , B^2 , \dots B^n$, removes the indices already counted and then computes the Local Trust Matrix $T$.
 
 This requires $n-1$ matrix products.
