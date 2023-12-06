@@ -12,7 +12,7 @@ def trust_matrix(B, n = 5, gamma = 0.5):
     # Initialization
     
     # the trust matrix T at the beginning
-    T = np.identity(B.shape[0]) + B
+    T = np.minimum(1, np.identity(B.shape[0]) + B)
 
     # the list of indexes already counted, as a matrix
     index_matrix = -T
@@ -23,8 +23,8 @@ def trust_matrix(B, n = 5, gamma = 0.5):
     # Loop
     for i in range(n-1): #(j = 2, ... n)
 
-        # compute B^j and eliminate all the redundant indices        (which will have negative values)
-        B_new_pow = np.maximum(0, B_prev_pow @ B + index_matrix)
+        # compute B^j and eliminate all the redundant indices
+        B_new_pow = np.maximum(0, np.minimum(1,B_prev_pow @ B) + index_matrix)
         
         # get all the new nonzero indices
         index_matrix = index_matrix - B_new_pow
