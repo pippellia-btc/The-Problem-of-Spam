@@ -7,7 +7,7 @@
 # the sum is replaced by the '|' (element-wise OR) operator
 # the subtraction '- index_matrix' is replaced by the  '& ~index_matrix' operator (AND NOT)
 
-def trust_matrix(B, n = 5, gamma = 0.5):
+def trust_matrix_dense(B, n = 5, gamma = 0.5):
 
     # the list of indexes already counted, as a matrix
     index_matrix = ~(np.identity(B.shape[0], dtype = bool) | B)
