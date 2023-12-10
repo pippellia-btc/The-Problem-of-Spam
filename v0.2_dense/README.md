@@ -1,7 +1,7 @@
 # Trust Matrix Algorithm v0.2 (Boolean, Dense Matrices)
 
 This is a simple implementation of the algorithm, in which the entries of $B$ are _boolean_.
-It computes the powers of the _Belief matrix_ $B , B^2 , \dots B^n$, removes the indices already counted and then computes the Local Trust Matrix $T$.
+It computes the powers of the _Belief matrix_ $B^2 , B^3 , \dots B^n$, removes the indices already counted and then computes the Local Trust Matrix $T$.
 
 This requires $n-1$ matrix products. The default $n$ is set = 5.
 
