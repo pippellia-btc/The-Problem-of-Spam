@@ -16,7 +16,7 @@ Thus, if $N$ is the number of total users, the density of 1s in the matrix $B$ i
 
 $$p \doteq \frac{1000 \cdot N}{N^2} = \frac{1000}{N}$$
 
-If $N = 10^9$, then $ p = 10^{-6}$
+If $N = 10^9$, then $p = 10^{-6}$
 
 It is interesting to discuss how these (relatively) few 1s will be distributed within the matrix $B$.
 The history of the Web teaches us that people will rarely be part of a single, gigantic community. What we see in practice is the emergence of communities linked by a topic of discussion or shared values among the members.
