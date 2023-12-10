@@ -2,10 +2,12 @@
 # This means that the matrix product is no more O(N^2.8) using the Strassen Algorithm
 # but (on average), it is O(N^2) ---> extraordinary improvement!
 
+# This however, doensn't work well when the density of 1s is below 0.1 O(N^3). Use v0.2_sparse instead.
+
 # the sum is replaced by the '|' (element-wise OR) operator
 # the subtraction '- index_matrix' is replaced by the  '& ~index_matrix' operator (AND NOT)
 
-def trust_matrix_bool(B, n = 5, gamma = 0.5):
+def trust_matrix(B, n = 5, gamma = 0.5):
 
     # the list of indexes already counted, as a matrix
     index_matrix = ~(np.identity(B.shape[0], dtype = bool) | B)
